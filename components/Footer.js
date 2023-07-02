@@ -6,9 +6,9 @@ const Footer = () => {
   const [selected, setSelected] = React.useState(1);
 
   return <>
-    <Box flex={1} bg="white"  width="100%" maxW="300px" alignSelf="center">
+    <Box flex={1} bg="indigo.600" height="15%" safeAreaBottom py="3" width="100%" alignSelf="center">
         
-        <HStack bg="indigo.600" alignItems="center" safeAreaBottom shadow={6}>
+        <HStack style={{verticalAlign:"bottom"}} py="3" bg="indigo.600" alignItems="center" safeAreaBottom shadow={6}>
           <Pressable cursor="pointer" opacity={selected === 0 ? 1 : 0.5} py="3" flex={1} onPress={() => setSelected(0)}>
             <Center>
               <Icon mb="1" as={<MaterialCommunityIcons name={selected === 0 ? 'home' : 'home-outline'} />} color="white" size="sm" />
